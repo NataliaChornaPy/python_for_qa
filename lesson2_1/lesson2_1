@@ -29,9 +29,9 @@ print set(a),"\n"
 
 #4 Write a program to calculate the number of times that the string 'hi'
 # appears anywhere in the given string and change 'hi' to 'bye'. Case should be ignored.
-a="hi girls,hi boys"
-print a.count('hi'),"times appears word 'hi'\n"
-b=a.replace('hi','bye')
+a="hi girls,Hi boys"
+print a.upper().lower().count('hi'),"times appears word 'hi'\n"
+b=a.replace('Hi','bye')
 print b,a,'\n'
 
 # 5.Unite three lists to one and print it in reverse order:
@@ -39,7 +39,7 @@ list1=[1,2,3]
 list2=[4,5,6]
 list3=[7,8,9]
 b=list1+list2+list3
-print b[::-1],'\n'
+print b[::-1], '\n'
 
 # 6 Having tuple  ('postgresql', 'semantic.amazonaws-prod.com', 5432, 'semantic', 'admin', '12345')
 # -with production database connection properties (dialect, host, port, database name, user name, password), program should:
