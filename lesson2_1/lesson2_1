@@ -29,10 +29,12 @@ print set(a),"\n"
 
 #4 Write a program to calculate the number of times that the string 'hi'
 # appears anywhere in the given string and change 'hi' to 'bye'. Case should be ignored.
-a="hi girls,Hi boys"
+a="hi girls,Hi boys,HI all"
+print a
 print a.upper().lower().count('hi'),"times appears word 'hi'\n"
-b=a.replace('Hi','bye')
-print b,a,'\n'
+c=a.upper().lower().replace('hi','by')
+
+print c,'\n'
 
 # 5.Unite three lists to one and print it in reverse order:
 list1=[1,2,3]
