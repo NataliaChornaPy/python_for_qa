@@ -52,7 +52,6 @@ print b[::-1],'\n'
 
 
 tupl = ('postgresql', 'semantic.amazonaws-prod.com', 5432, 'semantic', 'admin', '12345')
-print tupl[1],"dd"
 prod_config={'dialect':tupl[0],'host':tupl[1],'port':tupl[2],'database name':tupl[3],'user name':tupl[4],'password':tupl[5]}
 staging_config=prod_config.copy()
 staging_config['host']='semantic.amazonaws-staging.com'
@@ -61,5 +60,5 @@ staging_config['password']='root'
 conn_prod="{}://{}:{}@{}:{}/{}".format(prod_config['dialect'],prod_config['user name'],prod_config['password'],prod_config['host'],prod_config['port'],prod_config['database name'])
 print conn_prod
 
-conn_prod="{}://{}:{}@{}:{}/{}".format(staging_config['dialect'],staging_config['user name'],staging_config['password'],staging_config['host'],staging_config['port'],staging_config['database name'])
-print conn_prod
+conn_stag="{}://{}:{}@{}:{}/{}".format(staging_config['dialect'],staging_config['user name'],staging_config['password'],staging_config['host'],staging_config['port'],staging_config['database name'])
+print conn_stag
