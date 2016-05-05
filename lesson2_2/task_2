@@ -1,0 +1,16 @@
+# 2 Write a function that takes a comma-separated string and returns the last
+# element (separated by the last comma) or the entire string, if there is no comma in it.
+def commasep(a):
+    if str(a):
+        if a.split(','):
+            b= a.split(',')[-1]
+            print b
+        else: print a
+
+
+
+if __name__ == "__main__":
+   a="hello,bye,girls,boys"
+   b='hello bye girls boys'
+   commasep(a)
+   commasep(b)

@@ -1,0 +1,11 @@
+#4 Write program to evaluate (a or not b)
+# and (c or not a) expression for boolean varibles a, b, c showing result for all possible variables combinations.
+def combination():
+    var=[True,False]
+    for a in var:
+        for b in var:
+            for c in var:
+                res= (a or not b) and (c or not a)
+                print 'For a=',a,'b=',b,'c=',c,'result is',res
+
+combination()

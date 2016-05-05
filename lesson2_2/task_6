@@ -1,0 +1,10 @@
+#6 Write a function that returns dictionary where keys are even numbers
+# between 1 and n and values are keys in square, by default n = 100.
+def dictionary(n=100):
+    diction={}
+    a=range(2,n+1,2)
+    for elem in a:
+        diction[elem]=elem**2
+    print diction
+
+dictionary(30)

@@ -1,0 +1,115 @@
+# Write a function which takes a string and returns its first 10 characters concatenated with the last 10 characters.
+
+def conc(a):
+    if len(a)<10:
+        return None
+    else:
+        print a[0:10:1]+a[-10:]
+
+
+if __name__ == "__main__":
+    a='HelloboysgirlsaHelloAllHi'
+    conc(a)
+
+# 2 Write a function that takes a comma-separated string and returns the last
+# element (separated by the last comma) or the entire string, if there is no comma in it.
+def commasep(a):
+    if str(a):
+        if a.split(','):
+            b= a.split(',')[-1]
+            print b
+        else: print a
+
+if __name__ == "__main__":
+   a="hello,bye,girls,boys"
+   commasep(a)
+
+#3 Write a function that takes a list and returns a new
+# list that contains all the elements of the first list minus all the duplicates:
+   def newList(a):
+      dublicates=[]
+      listwithout=[]
+      for i in a :
+         if a.count(i)>=2:
+             dublicates.append(i)
+      for c in a:
+         if c not in set(dublicates):
+            listwithout.append(c)
+      print listwithout
+
+if __name__ == "__main__":
+   a=[1,1,2,3,3,2,8,5,9,9]
+   print a
+   newList(a)
+
+#4 Write program to evaluate (a or not b)
+# and (c or not a) expression for boolean varibles a, b, c showing result for all possible variables combinations.
+def combination():
+    var=[True,False]
+    for a in var:
+        for b in var:
+            for c in var:
+                res= (a or not b) and (c or not a)
+                print 'For a=',a,'b=',b,'c=',c,'result is',res
+
+combination()
+
+
+
+
+# 5 Write a function to return the sum of the numbers in the array, returning 0 for an empty array.
+# Since the number 13 is very unlucky, it does not count, and numbers that come immediately after a 13 also do not count.
+# Array could contain strings and boolean values (do not count them too):
+def suma(a):
+    listint=[]
+    if a:
+        for s in a:
+            if not (isinstance(s,bool) or isinstance(s,str)):
+                listint.append(s)
+                for elem in listint:
+                    if elem == 13:
+                        suma = sum(listint[:listint.index(13)])
+        print ('Sum of the numbers in the array before number 13 is'),suma
+    else: print('Array is empty')
+
+a=[1,2,1,False,3,1,"sss",13,18,True,5,6]
+# a=[]
+suma(a)
+
+#6 Write a function that returns dictionary where keys are even numbers
+# between 1 and n and values are keys in square, by default n = 100.
+def dictionary(n=100):
+    diction={}
+    a=range(2,n+1,2)
+    for elem in a:
+        diction[elem]=elem**2
+    print diction
+
+dictionary(20)
+
+# a=[5,6,3,4]
+# # def d():
+# bb=[]
+# n=5
+# b=dict(enumerate(a,start=1))
+# print b.keys(),b.items(),b
+# if n:
+#     dict(enumerate(a,start=1))
+
+# 7 Write a function to find out if the word is a palindrome. Please use next validation procedure:
+# calculate each letter occurrence in a word;
+# word will be a palindrome if all letters occurrences count іs even number except one possible odd number.
+
+def palindrome(a):
+    if a[::1]==a[::-1]:
+        print ("Palindrome")
+    else:
+        print ("Is not Palindrome")
+
+if __name__ == "__main__":
+    a="radar"
+    palindrome(a)
+
+
+
+

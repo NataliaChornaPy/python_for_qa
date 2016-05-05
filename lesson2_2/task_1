@@ -1,0 +1,12 @@
+# 1 Write a function which takes a string and returns its first 10 characters concatenated with the last 10 characters.
+
+def conc(a):
+    if len(a)<10:
+        return None
+    else:
+        print a[0:10:1]+a[-10:]
+
+
+if __name__ == "__main__":
+    a='HelloboysgirlsaHelloAllHi'
+    conc(a)

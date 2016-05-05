@@ -1,0 +1,20 @@
+# 5 Write a function to return the sum of the numbers in the array, returning 0 for an empty array.
+# Since the number 13 is very unlucky, it does not count, and numbers that come immediately after a 13 also do not count.
+# Array could contain strings and boolean values (do not count them too):
+def suma(a):
+    listint=[]
+    if a:
+        for s in a:
+            if not (isinstance(s,bool) or isinstance(s,str)):
+                listint.append(s)
+                for elem in listint:
+                    if elem == 13:
+                        suma = sum(listint[:listint.index(13)])
+        print ('Sum of the numbers in the array before number 13 is'),suma
+    else:
+        a=0
+        print('Array is empty'),a
+
+a=[1,2,1,False,3,1,"sss",13,18,True,5,6]
+# a=[]
+suma(a)

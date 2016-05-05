@@ -1,0 +1,10 @@
+# 7.Write a function to find out if the word is a palindrome.
+def palindrome(a):
+    if a[::1]==a[::-1]:
+        print ("Palindrome")
+    else:
+        print ("Is not Palindrome")
+
+if __name__ == "__main__":
+    a="radar"
+    palindrome(a)

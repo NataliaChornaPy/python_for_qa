@@ -1,0 +1,17 @@
+#3 Write a function that takes a list and returns a new
+# list that contains all the elements of the first list minus all the duplicates:
+def newList(a):
+      dublicates=[]
+      listwithout=[]
+      for i in a :
+         if a.count(i)>=2:
+             dublicates.append(i)
+      for c in a:
+         if c not in set(dublicates):
+            listwithout.append(c)
+      print listwithout
+
+if __name__ == "__main__":
+   a=[1,1,2,3,2,8,5,9,9]
+   print a
+   newList(a)
