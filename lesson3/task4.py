@@ -4,22 +4,22 @@ if __name__ == "__main__":
 
     f = open('newfile.csv', 'w')
     writer2=csv.writer(f)
-    w=[]
+    str=[]
 
     with open('Python for QA - bugs list - Sheet1.csv', 'r') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
-        for row in reader:
-            w=[]
-            for r in row:
-                if r =='critical':
-                    r=r.replace('critical','HIGH')
-                elif r =='high':
-                    r=r.replace('high','MEDIUM')
-                elif r =='medium':
-                    r=r.replace('medium','LOW')
+        for rows in reader:
+            str=[]
+            for row in rows:
+                if row =='critical':
+                    row=row.replace('critical','HIGH')
+                elif row =='high':
+                    row=row.replace('high','MEDIUM')
+                elif row =='medium':
+                    row=row.replace('medium','LOW')
 
-                w.append(r)
-            writer2.writerow(w)
-            print w
+                str.append(row)
+            writer2.writerow(str)
+
 
 
