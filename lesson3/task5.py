@@ -14,10 +14,11 @@ def creating_files (main_path):
         python_for_qa=main_path
         print python_for_qa
 
-    fold=['lesson1','lesson2']
+    fold=['lesson5']
 
     for folders in fold:
-        python_for_qa_lesson=main_path+"\{}".format(folders)
+        # instead   python_for_qa_lesson+"\\task_{}.py".format(i)  ----   os.path.join(main_path,"\{}".format(folders))
+        python_for_qa_lesson=os.path.join(main_path,"\{}".format(folders))
         if not os.path.exists(python_for_qa_lesson):
                  os.makedirs(python_for_qa_lesson)
                  os.path.dirname(python_for_qa_lesson)
@@ -26,9 +27,9 @@ def creating_files (main_path):
             print 'Folders',folders,'exist'
         for i in range(1,7):
             with open(python_for_qa_lesson+"\\task_{}.py".format(i),"w") as f:
-                f.close()
+                pass
     print "Files have been created"
 
 
 if __name__ == "__main__":
-    creating_files("C:\Users\Natalia_Chorna\Desktop")
+    creating_files("C:\Users\Natalia_Chorna")

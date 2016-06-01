@@ -7,6 +7,10 @@ if __name__ == "__main__":
     with open('alice_in_wonderland.txt','r') as f:
 
         file=f.read().replace('...','. ')
+        # print file
+        set1 = file
+        set2 = file
+        assert set1 == set2
         abbr=re.findall(pattern_abbr,file)
         print 'ABREVIATION to exclude',abbr
     # To exclude sentences like 1.A.1., U.S.
@@ -14,7 +18,7 @@ if __name__ == "__main__":
             for not_sent in abbr:
                 file_without_abbr=file.replace(not_sent,not_sent.replace('.',''))
                 file=file_without_abbr
-            print file_without_abbr
+            # print file_without_abbr
 
         else:
             pass

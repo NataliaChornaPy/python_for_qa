@@ -1,0 +1,27 @@
+#,Priority,Description,Environment,Owner,Created At
+1,HIGH,Division by zero,production,qa1,2/7/2016
+2,MEDIUM,Null pointer exception,staging,qa1,3/7/2016
+3,MEDIUM,Runtime error,production,qa1,4/7/2016
+4,HIGH,Integrity error while saving data,production,qa1,5/7/2016
+5,LOW,Application hangs,production,qa1,6/7/2016
+6,HIGH,Applications quits unexpectivly,local,qa1,7/7/2016
+7,MEDIUM,Unexpectivly application quits.,local,qa2,8/7/2016
+9,HIGH,Missed alert message in save dialog,production,qa2,10/7/2016
+10,LOW,Save dialog missed alert message new one,production,qa2,11/7/2016
+11,HIGH,Division by zero new one,production,qa2,12/7/2016
+12,LOW,Null pointer exception new one,production,qa2,1/7/2017
+13,MEDIUM,Runtime error  new one,staging,qa2,2/7/2017
+14,HIGH,Integrity error while saving data new one,production,qa2,3/7/2017
+15,LOW,Application hangs new one,production,qa2,4/7/2017
+17,MEDIUM,Unexpectivly application quits. new one,production,qa2,6/7/2017
+18,MEDIUM,Application hangs on Windows 10 new one,production,qa2,7/7/2017
+19,LOW,Missed alert message in save dialog new one,production,qa2,8/7/2017
+20,HIGH,Save dialog missed alert message new one,production,qa2,9/7/2017
+21,HIGH,Division by zero new two,staging,qa2,10/7/2017
+24,HIGH,Integrity error while saving data new two,production,qa2,1/7/2018
+25,LOW,Application hangs new two,production,qa2,2/7/2018
+26,MEDIUM,Applications quits unexpectivly new two,production,q3,3/7/2018
+27,LOW,Unexpectivly application quits. new two,staging,q3,4/7/2018
+28,HIGH,Application hangs on Windows 10 new two,staging,q3,5/7/2018
+29,HIGH,Missed alert message in save dialog new two,production,q3,6/7/2018
+30,HIGH,Save dialog missed alert message  new two,production,q3,7/7/2018
