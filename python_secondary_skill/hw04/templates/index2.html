@@ -1,0 +1,21 @@
+<script type="text/javascript">
+function getfolder(e) {
+    var files = e.target.files;
+    var path = files[0].webkitAbsolutePath;
+    var Folder = path.split("/");
+    alert(path);
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="file" name="path" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple />
+
+
+</body>
+</html>
