@@ -1,15 +1,15 @@
 import os, time, os.path
-from flask import Flask, request, url_for, render_template,redirect,send_from_directory
+from flask import Flask, request, url_for, render_template,redirect,send_from_directory,flash
 from werkzeug.utils import secure_filename
 from PIL import Image
 
-extensions=['jpg','jpeg']
+extensions=['jpg', 'jpeg']
 
 
-def check_file_extension(filename,extensions):
+def check_file_extension(filename, extensions):
 
         for extension in extensions:
-            if filename.endswith(extension.upper()):
+            if filename.lower().endswith(extension.lower()):
                 return True
         return False
 
@@ -48,15 +48,18 @@ def index():
 
 @app.route('/signup', methods=['POST'])
 def signup():
-    file = request.files['path']
-    filename = secure_filename(file.filename)
-    if check_file_extension(file.filename,extensions):
-        img = Image.open(file)
-        file = BlackWhite_foto(img) # convert to black/white
-        changed_file = landscape_orient(file)  # rotate
-        changed_file.save (os. path. join(app.config['UPLOAD_FOLDER'], filename)) # save photo
+    file_obj = request.files['path']
+    filename = secure_filename(file_obj.filename)
+    if check_file_extension(file_obj.filename, extensions):
+        try:                                            # to handle situation when file cann't be opened
+            img = Image.open(file_obj)
+        except:
+            return render_template('selected.html')
+        file_obj = BlackWhite_foto(img) # convert to black/white
+        changed_file = landscape_orient(file_obj)  # rotate
+        changed_file.save(os. path. join(app.config['UPLOAD_FOLDER'], filename)) # save photo
         return redirect(url_for('uploaded_file',
-                            filename=filename,as_attachment=True))
+                            filename=filename, as_attachment=True))
     else:
         return render_template('selected.html')
 
